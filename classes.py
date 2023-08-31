@@ -32,11 +32,11 @@ class ConnData(BaseModel):
 class ConnectionBroker():
     BASE_CONNECTION_DATA = ConnData(apikey =    '',
                                     empresa =   'Gestiondigital',
-                                    servidor =  settings.servidor,
-                                    puerto =    settings.puerto,
-                                    usuario =   settings.usuario,
-                                    passwd =    settings.passwd,
-                                    bd =        settings.bd
+                                    servidor =  settings.SERVIDOR,
+                                    puerto =    settings.PUERTO,
+                                    usuario =   settings.USUARIO,
+                                    passwd =    settings.PASSWD,
+                                    bd =        settings.BD
                             )
     
     def __init__(self):

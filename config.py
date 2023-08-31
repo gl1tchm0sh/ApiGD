@@ -1,14 +1,14 @@
 from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
-    servidor:       str
-    puerto:         str
-    usuario:        str
-    passwd:         str
-    bd:             str
-    secret_key:     str
-    algorithm:      str
-    token_timeout:  int
+    SERVIDOR:       str
+    PUERTO:         str
+    USUARIO:        str
+    PASSWD:         str
+    BD:             str
+    SECRET_KEY:     str
+    ALGORITHM:      str
+    TOKEN_TIMEOUT:  str
 
     class Config:
         env_file = ".env"

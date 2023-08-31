@@ -1,0 +1,16 @@
+# uvicorn APIGestionDigital:app --reload
+# sudo uvicorn --host 0.0.0.0 APIGestionDigital:app
+# sudo gunicorn -w 4 -k uvicorn.workers.UvicornWorker APIGestionDigital:app --bind 0.0.0.0:8000
+# ps -aef | grep -i gunicorn (Ver los procesos en curso)
+# sudo pkill gunicorn
+# Services: /etc/systemd/system/
+# 5:05:25 environment variables
+# 11:24:14 git 
+# 12:05 deploy   
+# Viendo - 13:00:26
+
+#Servicio /etc/systemd/system → api.service
+# systemctl start api   lo ejecuta
+# systemctl restart api reinicia
+# systemctl status api  chequea
+# sudo systemctl enable api activa ejecucion automatica

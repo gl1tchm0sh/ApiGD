@@ -3,9 +3,9 @@ from datetime import datetime, timedelta
 from fastapi import  HTTPException,status
 from config import settings
 
-SECRET_KEY = settings.secret_key
-ALGORITHM = settings.algorithm
-TOKEN_TIMEOUT = settings.token_timeout
+SECRET_KEY = settings.SECRET_KEY
+ALGORITHM = settings.ALGORITHM
+TOKEN_TIMEOUT = int(settings.TOKEN_TIMEOUT)
 
 def create_access_token(data:dict):
     to_encode = data.copy()
