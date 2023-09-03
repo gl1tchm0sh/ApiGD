@@ -1,3 +1,4 @@
+# 209.105.233.248
 # uvicorn APIGestionDigital:app --reload
 # sudo uvicorn --host 0.0.0.0 APIGestionDigital:app
 # sudo gunicorn -w 4 -k uvicorn.workers.UvicornWorker APIGestionDigital:app --bind 0.0.0.0:8000

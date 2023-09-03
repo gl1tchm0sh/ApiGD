@@ -1,0 +1,21 @@
+name: Build and deploy code
+
+on: 
+  push:
+    branches: ["main"]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+    name: push changes to production
+    uses: appleboy/ssh-action@master
+    with:
+      host: ${{secrets.PROD_HOST}}
+      username: ${{secrets.PROD_USERNAME}}
+      password: ${{secrets.PROD_PASSWORD}}
+      script: |
+        cd apis/src/
+        git pull
+        echo ${{secrets.PROD_PASSWORD}} | sudo -S systemctl restart api
