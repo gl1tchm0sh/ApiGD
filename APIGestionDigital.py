@@ -44,6 +44,7 @@ def get_connection_data(apikey:str):
     fetch_data = conn_manager.execute_query(query_str)
     column_names = ['type','title','cn','date','subtotal','tax','total','status']
     df = pd.DataFrame(fetch_data, columns=column_names)
+    
     print(json.loads(df.to_json()))
-    return df.to_json()
+    return json.loads(df.to_json())
 
