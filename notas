@@ -15,3 +15,9 @@
 # systemctl restart api reinicia
 # systemctl status api  chequea
 # sudo systemctl enable api activa ejecucion automatica
+
+
+#Git:
+#1) git add --all
+#2) git commit -m "titulo" -m "descripcion"
+#3) git push origin main

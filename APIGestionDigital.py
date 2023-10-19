@@ -36,7 +36,7 @@ def get_connection_data(apikey:str):
                         inv.Title          AS TITULO,
                         inv.cn             AS NUMERO,
                         inv.invoicenum     AS PUNTOVENTA,
-                        inv.DATE           AS FECHA,
+                        DATE_FORMAT(inv.DATE, '%Y%m%d')           AS FECHA,
                         inv.subtotal       AS SUBTOTAL,
                         inv.discount_type  AS TIPO_DESCUENTO,
                         inv.discount_Value AS DESCUENTO_VALOR,
